@@ -1,2 +1,2 @@
-# dotw_final
-Final Project for Drawing on the Web
+## Drawing on the Web Final Project
+# Color the Landscape
