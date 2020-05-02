@@ -8,3 +8,5 @@ Moving around in different cities, I somehow develop the habit of describing my 
 For this project, I put together three pictures of the city landscape of New York, Shanghai, and Guangzhou, drawing them on HTML canvas and manipulating their colors and textures. I choose three paintings respectively for the three cities, whose colors correspond to my feelings for the cities, and read colors from these paintings and apply them to redrawing the city landscapes. Each scene will be animated with light effects and background music, presenting as an interactive electronic postcard. There are 3D elements added to express my memories of the cities.
 
 The drawing of the postcards is animated by the user through moving the mouse around on the canvas.
+
+Link of the project on the server: http://i6.cims.nyu.edu/~zc1151/dotw_final/index.html
