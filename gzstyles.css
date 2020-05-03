@@ -1,0 +1,134 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%; 
+    z-index: 2;
+}
+
+.flowers {
+    position: absolute;
+    width: 25%;
+    bottom: 25%;
+    mix-blend-mode: screen;
+    z-index: 2;
+}
+
+#gzcol1 {
+    left: 19%;
+    bottom: 30%;
+}
+
+#gzcol2 {
+    left: 28%;
+}
+
+#gzcol3 {
+    left: 40%;
+    bottom: 27%;
+}
+
+#gzcol4 {
+    left: 61%;
+    width: 20%;
+}
+
+#gzcol5 {
+    left: 68%;
+    width: 30%;
+    height: 45%;
+}
+
+#gzcol6 {
+    left: 47%;
+    bottom: 28%;
+}
+
+#gzcol7 {
+    left: 30%;
+    width: 22%;
+    bottom: 35%;
+}
+
+#gzcol8 {
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    left: 0;
+    top: 25%;
+    mix-blend-mode: screen;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+#clouds {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#cloud-circle {
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    border-radius: 50%;
+    filter: url(#filter);
+    box-shadow: 400px 400px 60px 0px rgb(196, 214, 228);
+    opacity: 0;
+    top: -35%;
+    left: 12%;
+    z-index: 3;
+    animation: cloudmov 15s linear infinite;
+}
+
+@keyframes cloudmov {
+    0% {
+        transform: translateX(0px) translateZ(0px);
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(100px) translateZ(30px);
+        opacity: 0.4;
+    }
+    70% {
+        transform: translateX(200px) translateZ(50px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(280px) translateZ(80px);
+        opacity: 0;
+    }
+}
+
+#cloud-circle2 {
+    position: absolute;
+    width: 25%;
+    height: 22%;
+    border-radius: 50%;
+    filter: url(#filter2);
+    box-shadow: 400px 400px 60px 0px rgb(139, 185, 219);
+    opacity: 0.8;
+    top: -55%;
+    left: 28%;
+    z-index: 3;
+}
+
+

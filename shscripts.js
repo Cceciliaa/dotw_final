@@ -5,8 +5,10 @@ const canvas2 = document.querySelectorAll('canvas')[1];
 const context2 = canvas2.getContext('2d');
 
 const shbd = document.getElementById('shbd');
+const shbg = document.getElementById('shbg');
 const shcol1 = document.getElementById('shcol1');
 const shcol2 = document.getElementById('shcol2');
+const shcol3 = document.getElementById('shcol3');
 
 let width;
 let height;
@@ -43,12 +45,17 @@ function draw() {
     context2.clearRect(0, 0, width, height);
 
     context1.drawImage(shbd, 0, 0, width / pxScale, height / pxScale);
-    context1.globalCompositeOperation = 'lighter';
+
+    context2.drawImage(shbg, 0, 0, width / pxScale, height / pxScale);
 
     let buildingData = context1.getImageData(0, 0, width, height);
     let bdata = buildingData.data;
 
+    let backgroundData = context2.getImageData(0, 0, width, height);
+    let bgata = backgroundData.data;
+
     context1.clearRect(0, 0, width, height);
+    context2.clearRect(0, 0, width, height);
 
     for (let y = 0; y < buildingData.height; y++) {
         for (let x = 0; x < buildingData.width; x++) {
@@ -59,19 +66,52 @@ function draw() {
             let bb = bdata[index + 2]; // blue
             let ba = bdata[index + 3]; // alpha
 
-            if ((br + bg + bb) / 3 < 80) {
-                context1.fillStyle = '#777B7E';
+            let gr = bgata[index + 0]; // red
+            let gg = bgata[index + 1]; // green
+            let gb = bgata[index + 2]; // blue
+            let ga = bgata[index + 3]; // alpha
+
+            if ((br + bg + bb) / 3 > 75) {
+                context1.fillStyle = 'rgba(' + gr + ', ' + gg + ', ' + gb + ', 0.8)';
                 context1.fillRect(x, y, 1, 1);
             }
         }
     }
 }
 
+let opc1 = 0;
+let opc2 = 1;
+let opc3 = 0;
+
+function transit() {
+    if (opc1 < 1) {
+        opc1 += 0.002;
+        if (opc1 >= 0.6) {
+            opc2 -= 0.001;
+        }
+    }
+    else if (opc1 >= 1 & opc3 < 0.2) {
+        opc3 += 0.001;
+    }
+
+    if (opc3 >= 0.2) {
+        cancelAnimationFrame(anm);
+    }
+
+    shcol1.style.opacity = opc1;
+    shcol2.style.opacity = opc2;
+    shcol3.style.opacity = opc3;
+
+    anm = requestAnimationFrame(transit);
+}
+
 window.addEventListener('load', () => {
     setup();
     draw();
+    transit();
     });
 window.addEventListener('resize', () => {
     setup();
     draw();
+    transit();
 });

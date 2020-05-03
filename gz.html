@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guangzhou Memory</title>
+    <link rel="stylesheet" href="gzstyles.css">
+</head>
+
+<body>
+
+    <canvas></canvas>
+    <canvas></canvas>
+
+    <div style="display: none;">
+        <img id="gzbd" src="images/gztower.jpg">
+    </div>
+
+    <div style="display: none;">
+        <img id="gzbg" src="images/color.jpg">
+    </div>
+
+    <div>
+        <img class="flowers" id="gzcol1" src="images/flower1.gif">
+        <img class="flowers" id="gzcol2" src="images/flower2.gif">
+        <img class="flowers" id="gzcol3" src="images/flower3.gif">
+        <img class="flowers" id="gzcol4" src="images/flower4.gif">
+        <img class="flowers" id="gzcol5" src="images/flower5.gif">
+        <img class="flowers" id="gzcol6" src="images/flower6.gif">
+        <img class="flowers" id="gzcol7" src="images/flower7.gif"> 
+    </div>
+
+    <img id="gzcol8" src="images/flowers.gif">
+
+    <div id="clouds">
+        <div id="cloud-circle"></div>
+        <svg width="0" height="0"> 
+        <filter id="filter">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+            <feDisplacementMap in="SourceGraphic" scale="180" />
+        </filter>
+        </svg>
+
+        <div id="cloud-circle2"></div>
+        <svg width="0" height="0"> 
+        <filter id="filter2">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+            <feDisplacementMap in="SourceGraphic" scale="180" />
+        </filter>
+        </svg>
+    </div>
+
+    <script src="gzscripts.js"></script>
+</body>
+
+</html>
