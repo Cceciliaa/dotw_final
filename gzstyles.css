@@ -22,6 +22,10 @@ canvas {
     z-index: 2;
 }
 
+#elm {
+    opacity: 0;
+}
+
 .flowers {
     position: absolute;
     width: 25%;

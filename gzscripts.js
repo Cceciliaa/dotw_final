@@ -1,3 +1,5 @@
+const elm = document.getElementById('elm');
+
 const canvas1 = document.querySelector('canvas');
 const context1 = canvas1.getContext('2d');
 
@@ -76,6 +78,7 @@ function draw() {
             }
         }
     }
+    elm.style.opacity = 1;
 }
 
 window.addEventListener('load', () => {
