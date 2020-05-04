@@ -127,6 +127,27 @@ function draw() {
       }
     }
   }
+
+  context1.fillStyle = "sienna";
+  context1.lineWidth = 12;
+  context1.font = "bold 50px Courier New";
+  context1.fillText("From", width*2+50, height);
+  context1.font = "bold 40px Courier New";
+  context1.fillText("New York", width*2+50, height+50);
+
+  context2.fillStyle = "sienna";
+  context2.lineWidth = 12;
+  context2.font = "bold 50px Courier New";
+  context2.fillText("From", width*2+50, height);
+  context2.font = "bold 40px Courier New";
+  context2.fillText("Shanghai", width*2+50, height+50);
+
+  context3.fillStyle = "sienna";
+  context3.lineWidth = 12;
+  context3.font = "bold 50px Courier New";
+  context3.fillText("From", width*3, height*3/2);
+  context3.font = "bold 40px Courier New";
+  context3.fillText("Guangzhou", width*3, height*3/2+50);
 }
 
 let camera, scene, renderer;
@@ -156,7 +177,7 @@ function init() {
 function text() {
   let loader = new THREE.FontLoader();
 
-  loader.load('helvetiker_regular.typeface.json', function (font) {
+  loader.load('js/helvetiker_regular.typeface.json', function (font) {
 
     let geometry = new THREE.TextGeometry('City Memories', {
       font: font,
@@ -168,7 +189,7 @@ function text() {
       bevelEnabled: true
     });
 
-    let material = new THREE.MeshBasicMaterial( { color: 0xff0000, transparent: true, opacity: 0.4, side: THREE.DoubleSide } );
+    let material = new THREE.MeshBasicMaterial( { color: 0xCD5C5C, transparent: true, opacity: 0.8, side: THREE.DoubleSide } );
     let text = new THREE.Mesh( geometry, material );
 
     text.position.set(-450, 400, -100);

@@ -5,6 +5,8 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    background: url("images/mmrbg.jpg") no-repeat center center fixed; 
+    background-size: cover;
 }
 
 #space {
@@ -29,6 +31,7 @@ body {
     grid-row-gap: 0;
     perspective: 640px;
     perspective-origin: center;
+    z-index: 9;
 }
 
 a {
