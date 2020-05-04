@@ -1,7 +1,7 @@
 # Drawing on the Web Final Project
 ## City Memories
 
-City born and city bread, I am more than familiar with city landscapes and architectures, and yet, the unique designs of the buildings never fail to fascinate me. 
+City born and city bread, I am more than familiar with city views, and yet, the unique cultures and lifestyles of different cities never fail to fascinate me. 
 
 I have been moving around in different cities in the past few years, and enjoyed different vibes that each offers. In particular, New York, where I lived and studied for the past year, impresses me with the pretty view of its skyline; Shanghai, where my college's home campus locates, lives in my memory as a city of lights, with the colorful LED lights lightening nearly all of the major streets; and lastly, Guangzhou, where I was born and raised, has always inspired me with its liveliness, for, throughout different seasons of the year, there are always some kinds of flowers blossoming.
 
