@@ -77,7 +77,7 @@ canvas {
     left: 0;
     top: 25%;
     mix-blend-mode: screen;
-    opacity: 0.3;
+    opacity: 0;
     z-index: 2;
 }
 
