@@ -177,7 +177,7 @@ function init() {
 function text() {
   let loader = new THREE.FontLoader();
 
-  loader.load('helvetiker_regular.typeface.json', function (font) {
+  loader.load('js/helvetiker_regular.typeface.json', function (font) {
 
     let geometry = new THREE.TextGeometry('City Memories', {
       font: font,
